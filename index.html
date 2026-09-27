@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flappy Kiro</title>
+    <style>
+      /* Center the canvas on a calm sky-toned page. Fully self-contained; no
+         external stylesheets or fonts so the game runs entirely client-side. */
+      :root {
+        color-scheme: light dark;
+      }
+
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: #4ec0ca; /* sky */
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      }
+
+      #game {
+        /* Match the config's canvasWidth x canvasHeight (480 x 640). */
+        display: block;
+        background: #4ec0ca;
+        border-radius: 6px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+        /* Keep the canvas within small viewports while preserving aspect. */
+        max-width: 100vw;
+        max-height: 100vh;
+        outline: none; /* focus ring suppressed; canvas is focused for input */
+        touch-action: manipulation; /* avoid double-tap zoom eating taps */
+      }
+
+      /* Shown by bootstrap when the browser cannot provide a 2D canvas. */
+      .unsupported-browser-message {
+        max-width: 480px;
+        margin: 1rem;
+        padding: 1rem 1.25rem;
+        border-radius: 6px;
+        background: #b00020;
+        color: #fff;
+        font-size: 1rem;
+        line-height: 1.4;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Single game canvas sized to defaultConfig (480 x 640). tabindex makes it
+         focusable so it receives keydown for the spacebar flap. The content
+         inside the tag is the fallback shown to browsers without canvas. -->
+    <canvas id="game" width="480" height="640" tabindex="0">
+      Your browser does not support the HTML5 canvas element required to play
+      Flappy Kiro. Please try a modern browser.
+    </canvas>
+
+    <!-- Load the app as an ES module. All game logic runs client-side; there is
+         no server dependency and no external/CDN script. -->
+    <script type="module">
+      import bootstrap from "./src/shell/bootstrap.js";
+
+      const canvas = document.getElementById("game");
+      // Focus the canvas so the spacebar reaches the game immediately.
+      canvas.focus();
+      bootstrap(canvas);
+    </script>
+  </body>
+</html>

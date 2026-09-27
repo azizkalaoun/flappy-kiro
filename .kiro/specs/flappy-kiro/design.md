@@ -259,6 +259,45 @@ Derived helper: `ghostBox(ghost)` produces the AABB `{ left, right, top, bottom 
 
 The Play_Area is bounded by `ceilingY` (top) and `groundTop` (bottom); the ground strip occupies `groundTop..canvasHeight`.
 
+### Configuration and Tuning
+
+The `GameConfig` interface above is not just a type — it is the game's single tuning surface. To let a designer retune the whole game by editing one place, the design fixes the following rules:
+
+- **One source of truth.** All tunable constants live in a single module `src/domain/config.js`, which exports a `defaultConfig` object of type `GameConfig`. This module is the single source of truth for every gameplay number.
+- **No hardcoded gameplay numbers.** No other module hardcodes gameplay values. Every domain function (`physics`, `pipeSystem`, `collision`, `scoring`, `GameEngine`) and every shell component (`GameLoop`, `Renderer`, `InputController`, `AudioManager`, `HighScoreStore`) receives the values it needs from config via dependency injection. Retuning the game therefore means editing `config.js` only.
+- **Self-documenting fields.** Each field in `defaultConfig` carries an inline comment documenting its unit (`px`, `px/s`, `px/s^2`, `ms`, or a `multiplier`) and, where the requirements define one, its valid range. For example:
+  - `scrollSpeed` — px/s, valid `100..300` (Req 4.1)
+  - `gapMargin` — px, valid `>= 20` (Req 4.4)
+  - `gapHeightMin` / `gapHeightMax` — px, derived as `2.5..4 × ghostHeight` (Req 4.5)
+  - `restartLockoutMs` — ms, fixed at `500` (Req 8.3)
+  - `gravity` — px/s^2 (Req 2.1); `maxFallVelocity` / `flapVelocity` — px/s (Req 2.4, 3.1)
+
+  A concrete sketch (values illustrative; ranges are the constraints):
+
+  ```js
+  // src/domain/config.js
+  export const defaultConfig = {
+    canvasWidth: 480,        // px
+    canvasHeight: 640,       // px
+    ceilingY: 0,             // px, top of Play_Area
+    groundTop: 560,          // px, top of ground strip = bottom of Play_Area
+    gravity: 1600,           // px/s^2 (Req 2.1)
+    maxFallVelocity: 700,    // px/s (Req 2.4)
+    flapVelocity: 480,       // px/s upward magnitude (Req 3.1)
+    scrollSpeed: 160,        // px/s, valid 100..300 (Req 4.1)
+    pipeSpacingMin: 200,     // px (Req 4.3)
+    pipeSpacingMax: 400,     // px (Req 4.3)
+    gapMargin: 20,           // px, valid >= 20 (Req 4.4)
+    gapHeightMin: 2.5,       // multiplier of ghostHeight (Req 4.5)
+    gapHeightMax: 4,         // multiplier of ghostHeight (Req 4.5)
+    pipeWidth: 60,           // px
+    restartLockoutMs: 500,   // ms, fixed at 500 (Req 8.3)
+  };
+  ```
+
+- **When values take effect.** Config is read once at `GameEngine` construction / bootstrap. Changes take effect on reload; values used only at spawn or reset (gap geometry, spacing, start position) also take effect on the next new game. Because config is passed in rather than read from globals, the pure domain layer stays deterministic and directly testable — property tests inject their own config, exactly as the Testing Strategy assumes.
+- **Future overrides (out of scope).** Injecting config in one place keeps the door open for optional override mechanisms later (e.g. a query-string parameter or a debug panel that supplies an alternate `GameConfig`) without touching the domain layer. These are noted only for extensibility and are out of scope for this design.
+
 ## Correctness Properties
 
 *A property is a characteristic or behavior that should hold true across all valid executions of a system — essentially, a formal statement about what the system should do. Properties serve as the bridge between human-readable specifications and machine-verifiable correctness guarantees.*

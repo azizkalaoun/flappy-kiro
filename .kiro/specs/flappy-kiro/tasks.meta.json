@@ -1,0 +1,496 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1. Set up project structure and test tooling": [
+      {
+        "executionId": "ba757076-5391-4933-80d1-7feec3681030",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790441067063
+      },
+      {
+        "executionId": "ba757076-5391-4933-80d1-7feec3681030",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790441077070
+      },
+      {
+        "executionId": "ba757076-5391-4933-80d1-7feec3681030",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790441269450
+      }
+    ],
+    "2.1 Implement gravity, flap, and clamping in `src/domain/physics.js`": [
+      {
+        "executionId": "ba757076-5391-4933-80d1-7feec3681030",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790441068969
+      },
+      {
+        "executionId": "ba757076-5391-4933-80d1-7feec3681030",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790441273152
+      },
+      {
+        "executionId": "ba757076-5391-4933-80d1-7feec3681030",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790441413495
+      }
+    ],
+    "3.1 Implement scroll, cull, spawn, and pair generation in `src/domain/pipeSystem.js`": [
+      {
+        "executionId": "ba757076-5391-4933-80d1-7feec3681030",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790441069608
+      },
+      {
+        "executionId": "ba757076-5391-4933-80d1-7feec3681030",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790441274644
+      },
+      {
+        "executionId": "ba757076-5391-4933-80d1-7feec3681030",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790441415042
+      }
+    ],
+    "4.1 Implement AABB collision predicates in `src/domain/collision.js`": [
+      {
+        "executionId": "ba757076-5391-4933-80d1-7feec3681030",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790441069925
+      },
+      {
+        "executionId": "ba757076-5391-4933-80d1-7feec3681030",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790441275553
+      },
+      {
+        "executionId": "ba757076-5391-4933-80d1-7feec3681030",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790441415891
+      }
+    ],
+    "5.1 Implement pass detection and score clamping in `src/domain/scoring.js`": [
+      {
+        "executionId": "ba757076-5391-4933-80d1-7feec3681030",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790441070102
+      },
+      {
+        "executionId": "ba757076-5391-4933-80d1-7feec3681030",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790441276967
+      },
+      {
+        "executionId": "ba757076-5391-4933-80d1-7feec3681030",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790441417310
+      }
+    ],
+    "6.1 Implement `parseHighScore(raw)` in `src/domain/highScore.js`": [
+      {
+        "executionId": "ba757076-5391-4933-80d1-7feec3681030",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790441070192
+      },
+      {
+        "executionId": "ba757076-5391-4933-80d1-7feec3681030",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790441277830
+      },
+      {
+        "executionId": "ba757076-5391-4933-80d1-7feec3681030",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790441418746
+      }
+    ],
+    "7.1 Implement `formatScore(score, high)` in `src/domain/format.js`": [
+      {
+        "executionId": "ba757076-5391-4933-80d1-7feec3681030",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790441070287
+      },
+      {
+        "executionId": "ba757076-5391-4933-80d1-7feec3681030",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790441419661
+      },
+      {
+        "executionId": "ba757076-5391-4933-80d1-7feec3681030",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790441499535
+      },
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790442852175
+      },
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790442855181
+      }
+    ],
+    "8. Checkpoint - Ensure all domain-primitive tests pass": [
+      {
+        "executionId": "ba757076-5391-4933-80d1-7feec3681030",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790441070373
+      },
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790442867978
+      },
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790442878146
+      },
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790442882023
+      }
+    ],
+    "9.1 Implement `GameEngine` in `src/domain/gameEngine.js`": [
+      {
+        "executionId": "ba757076-5391-4933-80d1-7feec3681030",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790441070456
+      },
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790442868162
+      },
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790442885378
+      },
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790443048638
+      }
+    ],
+    "10. Checkpoint - Ensure all domain (engine + property) tests pass": [
+      {
+        "executionId": "ba757076-5391-4933-80d1-7feec3681030",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790441070538
+      },
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790442868244
+      },
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790443052110
+      },
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790443054759
+      }
+    ],
+    "11.1 Implement `src/shell/assetLoader.js`": [
+      {
+        "executionId": "ba757076-5391-4933-80d1-7feec3681030",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790441070630
+      },
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790442868343
+      },
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790443060586
+      },
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790443375759
+      }
+    ],
+    "12.1 Implement `src/shell/highScoreStore.js`": [
+      {
+        "executionId": "ba757076-5391-4933-80d1-7feec3681030",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790441070705
+      },
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790442868430
+      },
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790443061642
+      },
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790443376701
+      }
+    ],
+    "13.1 Implement `src/shell/audioManager.js`": [
+      {
+        "executionId": "ba757076-5391-4933-80d1-7feec3681030",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790441070822
+      },
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790442868525
+      },
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790443062954
+      },
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790443378144
+      }
+    ],
+    "14.1 Implement `src/shell/renderer.js`": [
+      {
+        "executionId": "ba757076-5391-4933-80d1-7feec3681030",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790441070904
+      },
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790442868611
+      },
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790443063888
+      },
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790443379065
+      }
+    ],
+    "15.1 Implement `src/shell/inputController.js`": [
+      {
+        "executionId": "ba757076-5391-4933-80d1-7feec3681030",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790441070988
+      },
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790442868705
+      },
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790443064966
+      },
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790443380087
+      }
+    ],
+    "16.1 Implement `src/shell/gameLoop.js`": [
+      {
+        "executionId": "ba757076-5391-4933-80d1-7feec3681030",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790441071086
+      },
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790442868790
+      },
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790443381269
+      },
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790443544272
+      }
+    ],
+    "17.1 Implement `src/shell/bootstrap.js`": [
+      {
+        "executionId": "ba757076-5391-4933-80d1-7feec3681030",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790441071174
+      },
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790442868893
+      },
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790443545334
+      },
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790443683077
+      }
+    ],
+    "18. Create the HTML entry point and wire the app": [
+      {
+        "executionId": "ba757076-5391-4933-80d1-7feec3681030",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790441071307
+      },
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790442869004
+      },
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790443683859
+      },
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790443754831
+      }
+    ],
+    "19. Final checkpoint - Ensure all tests pass": [
+      {
+        "executionId": "ba757076-5391-4933-80d1-7feec3681030",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790441071447
+      },
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790442869097
+      },
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790443755725
+      },
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790443777216
+      }
+    ],
+    "2. Implement the physics module": [
+      {
+        "executionId": "ba757076-5391-4933-80d1-7feec3681030",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790441413902
+      }
+    ],
+    "3. Implement the pipe system module": [
+      {
+        "executionId": "ba757076-5391-4933-80d1-7feec3681030",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790441415368
+      }
+    ],
+    "4. Implement the collision module": [
+      {
+        "executionId": "ba757076-5391-4933-80d1-7feec3681030",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790441416203
+      }
+    ],
+    "5. Implement the scoring module": [
+      {
+        "executionId": "ba757076-5391-4933-80d1-7feec3681030",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790441417631
+      }
+    ],
+    "6. Implement high-score parsing helper": [
+      {
+        "executionId": "ba757076-5391-4933-80d1-7feec3681030",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790441419067
+      }
+    ],
+    "7. Implement score formatting helper": [
+      {
+        "executionId": "ba757076-5391-4933-80d1-7feec3681030",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790441499634
+      }
+    ],
+    "9. Implement the GameEngine state machine": [
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790443048755
+      }
+    ],
+    "11. Implement the AssetLoader shell module": [
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790443375904
+      }
+    ],
+    "12. Implement the HighScoreStore shell module": [
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790443376849
+      }
+    ],
+    "13. Implement the AudioManager shell module": [
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790443378251
+      }
+    ],
+    "14. Implement the Renderer shell module": [
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790443379170
+      }
+    ],
+    "15. Implement the InputController shell module": [
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790443380182
+      }
+    ],
+    "16. Implement the GameLoop shell module": [
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790443544416
+      }
+    ],
+    "17. Implement bootstrap and canvas support detection": [
+      {
+        "executionId": "2ad6b4f8-c6af-415d-9040-6df494df5231",
+        "chatSessionId": "sess_a93e1c2a-015e-4c97-98f0-2a6d0a440834",
+        "timestamp": 1790443683193
+      }
+    ]
+  }
+}
